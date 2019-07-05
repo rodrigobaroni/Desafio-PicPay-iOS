@@ -12,11 +12,10 @@ class CustomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackground()
     }
     
-    private func setupBackground() {
-        print("backgrond setup")
+    private func setupStatusBar() {
+        
     }
 
 }

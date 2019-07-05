@@ -32,7 +32,7 @@
                             <constraint firstAttribute="height" constant="20" id="O3z-aJ-aC3"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-MU-lTo">
@@ -41,10 +41,11 @@
                             <constraint firstAttribute="height" constant="17" id="xL9-lL-eYs"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="NCd-EY-eI2" firstAttribute="leading" secondItem="UZx-KZ-4Eh" secondAttribute="trailing" constant="16" id="2jw-Db-mtt"/>
                     <constraint firstAttribute="trailing" secondItem="BdG-MU-lTo" secondAttribute="trailing" constant="20" id="6JT-1v-aRR"/>
