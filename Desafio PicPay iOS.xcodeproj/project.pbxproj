@@ -10,6 +10,7 @@
 		1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BC22CF82C40054307D /* CustomViewController.swift */; };
 		1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BE22CF964C0054307D /* PicPayButton.swift */; };
 		1E3F62C222CF990B0054307D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C122CF990B0054307D /* UIColor+Extension.swift */; };
+		1E3F62C522D375540054307D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C422D375540054307D /* Service.swift */; };
 		1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510522CE645200A0E036 /* AppDelegate.swift */; };
 		1EAB510B22CE645200A0E036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB510922CE645200A0E036 /* Main.storyboard */; };
 		1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510C22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 		1E3F62BC22CF82C40054307D /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		1E3F62BE22CF964C0054307D /* PicPayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayButton.swift; sourceTree = "<group>"; };
 		1E3F62C122CF990B0054307D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1E3F62C422D375540054307D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1EAB510222CE645200A0E036 /* Desafio PicPay iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio PicPay iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB510522CE645200A0E036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EAB510A22CE645200A0E036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		1E3F62C322D374520054307D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1E3F62C422D375540054307D /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		1EAB50F922CE645200A0E036 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		1EAB510422CE645200A0E036 /* Desafio PicPay iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1E3F62C322D374520054307D /* Service */,
 				1E3F62C022CF98FA0054307D /* Extension */,
 				1E3F62BB22CF82AA0054307D /* Common */,
 				1EAB513322CE6D6F00A0E036 /* Detail */,
@@ -380,6 +391,7 @@
 				1EAB513722CE6DB700A0E036 /* ContactListViewController.swift in Sources */,
 				1E3F62C222CF990B0054307D /* UIColor+Extension.swift in Sources */,
 				1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */,
+				1E3F62C522D375540054307D /* Service.swift in Sources */,
 				1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */,
 				1EAB513222CE6D6500A0E036 /* InputValueViewController.swift in Sources */,
 				1EAB512F22CE6C9900A0E036 /* CardViewController.swift in Sources */,
