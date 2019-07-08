@@ -14,8 +14,9 @@ class CustomViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    private func setupStatusBar() {
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
+    
 
 }
