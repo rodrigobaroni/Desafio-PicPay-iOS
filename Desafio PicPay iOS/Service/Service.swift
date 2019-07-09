@@ -8,45 +8,31 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
-protocol ServiceProtocol {
-    func users(method: HTTPMethod, url: ServiceURLRequest,completion : @escaping () -> Void)
-    func payment(method: HTTPMethod, url: ServiceURLRequest, body: String,completion : @escaping () -> Void)
-}
-
-class Service: ServiceProtocol {
-    
-    func users(method: HTTPMethod, url: ServiceURLRequest, completion: @escaping () -> Void) {
-        
-    }
-    
-    func payment(method: HTTPMethod, url: ServiceURLRequest, body: String, completion: @escaping () -> Void) {
-        
-    }
-    
-    func sendRequestRequest() {
-        /**
-         Request
-         get http://careers.picpay.com/tests/mobdev/users
-         */
-        
-        // Fetch Request
-        Alamofire.request("http://careers.picpay.com/tests/mobdev/users", method: .get)
-            .validate(statusCode: 200..<300)
-            .responseJSON { response in
-                if (response.result.error == nil) {
-                    debugPrint("HTTP Response Body: \(response.data)")
-                }
-                else {
-                    debugPrint("HTTP Request failed: \(response.result.error)")
-                }
-        }
-    }
-
-}
-
-struct ServiceURLRequest {
+private struct ServiceURLRequest {
     static let users = "http://careers.picpay.com/tests/mobdev/users"
     static let payment = "http://careers.picpay.com/tests/mobdev/transaction"
+}
+
+class Service {
     
+    static func users(completion: @escaping (_ response: User) -> Void) {
+        Alamofire.request(ServiceURLRequest.users, method: .get)
+            .validate(statusCode: 200..<300).responseUser(completionHandler: { (response) in
+                
+            if let userModel = response.result.value {
+                completion(userModel)
+            }
+        })
+    }
+    
+    static func payment(body: TransactionParameters, completion: @escaping (_ response: PaymentModel) -> Void) {
+        
+        Alamofire.request(ServiceURLRequest.payment, method: .post, parameters: body.dictionaryRepresentation).responsePaymentModel { (response) in
+            if let paymentModel = response.result.value {
+                completion(paymentModel)
+            }
+        }
+    }
 }

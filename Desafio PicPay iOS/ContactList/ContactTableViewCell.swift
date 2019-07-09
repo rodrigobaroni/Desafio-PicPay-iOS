@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ContactTableViewCell: UITableViewCell {
 
+    @IBOutlet private(set) weak var nickNameLabel: UILabel?
+    @IBOutlet private(set) weak var nameLabel: UILabel?
+    @IBOutlet private(set) weak var userImgView: UIImageView?
+    
+    private let sizeOfImageView = CGFloat(52)
+    
+    var contact: UserModel? {
+        didSet {
+            self.setupContact()
+            self.setupCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCell() {
+        self.backgroundColor = UIColor.picPayBlack
+    }
+    
+    func setupContact() {
+        
+        if let contact = contact, let name = contact.name, let nickName = contact.username, let image = contact.img {
+            self.nickNameLabel?.text = nickName
+            self.nameLabel?.text = name
+            self.userImgView?.downloaded(from: image)
+            self.userImgView?.layer.cornerRadius = ((self.userImgView?.frame.size.width ?? sizeOfImageView) / 2)
+            self.userImgView?.clipsToBounds = true
+            self.setNeedsDisplay()
+        }
     }
     
 }

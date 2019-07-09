@@ -19,16 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amV-HW-lEe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="401"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eKd-Ay-QM4" customClass="ContactTableViewCell" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eKd-Ay-QM4" id="byS-Ol-ygi">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="A quem você deseja pagar" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-rV-CTO" customClass="CustomSearchBar" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fFo-hd-fCx"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="amV-HW-lEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BNL-3N-XYY"/>
-                            <constraint firstItem="amV-HW-lEe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XmN-Z2-tTk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="amV-HW-lEe" secondAttribute="trailing" id="qbV-24-AF0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="amV-HW-lEe" secondAttribute="bottom" id="xkf-l0-feZ"/>
+                            <constraint firstItem="VNn-rV-CTO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jfc-Fq-7xK"/>
+                            <constraint firstItem="VNn-rV-CTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YMH-J1-jlc"/>
+                            <constraint firstItem="VNn-rV-CTO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hte-74-ARj"/>
+                            <constraint firstItem="amV-HW-lEe" firstAttribute="top" secondItem="VNn-rV-CTO" secondAttribute="bottom" id="r57-EA-OQ8"/>
+                            <constraint firstItem="amV-HW-lEe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rY1-O4-B3u"/>
+                            <constraint firstItem="amV-HW-lEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tkG-ho-Nhh"/>
+                            <constraint firstItem="amV-HW-lEe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yYX-WL-xZa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,12 +57,13 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="jLO-0y-j0k"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="VNn-rV-CTO" id="H3G-Xg-U92"/>
                         <outlet property="tableView" destination="amV-HW-lEe" id="AeZ-Sx-oQA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="104"/>
+            <point key="canvasLocation" x="1188.75" y="103.52112676056338"/>
         </scene>
         <!--Add New Card View Controller-->
         <scene sceneID="m25-08-8pP">

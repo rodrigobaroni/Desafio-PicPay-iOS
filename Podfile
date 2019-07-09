@@ -9,7 +9,8 @@ target 'Desafio PicPay iOS' do
 
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'IQKeyboardManagerSwift'
-pod 'Alamofire', '~> 4.0.0'
+pod 'Alamofire', '~> 4.8.0'
+pod 'AlamofireImage', '~> 3.5'
 
   target 'Desafio PicPay iOSUITests' do
     inherit! :search_paths

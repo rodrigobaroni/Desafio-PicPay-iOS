@@ -18,5 +18,9 @@ class CustomViewController: UIViewController {
         return .lightContent
     }
     
+    func setTitle(with name: String) {
+        self.title = name
+    }
+    
 
 }

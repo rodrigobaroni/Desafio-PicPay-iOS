@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E03C0EE22D3C0C100B61C00 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0ED22D3C0C100B61C00 /* PaymentModel.swift */; };
+		1E03C0F022D3C1D800B61C00 /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0EF22D3C1D800B61C00 /* DataRequest+Extension.swift */; };
+		1E03C0F222D3C22700B61C00 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F122D3C22700B61C00 /* JSONDecoder.swift */; };
+		1E03C0F422D3C42800B61C00 /* TransactionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F322D3C42800B61C00 /* TransactionParameters.swift */; };
+		1E03C0F622D40F2200B61C00 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */; };
+		1E03C0FA22D4A95200B61C00 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */; };
+		1E03C0FC22D4CE7700B61C00 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */; };
 		1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BC22CF82C40054307D /* CustomViewController.swift */; };
 		1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BE22CF964C0054307D /* PicPayButton.swift */; };
 		1E3F62C222CF990B0054307D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C122CF990B0054307D /* UIColor+Extension.swift */; };
 		1E3F62C522D375540054307D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C422D375540054307D /* Service.swift */; };
+		1E3F62C822D3AF150054307D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C722D3AF150054307D /* UserModel.swift */; };
 		1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510522CE645200A0E036 /* AppDelegate.swift */; };
 		1EAB510B22CE645200A0E036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB510922CE645200A0E036 /* Main.storyboard */; };
 		1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510C22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld */; };
@@ -39,10 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E03C0ED22D3C0C100B61C00 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		1E03C0EF22D3C1D800B61C00 /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
+		1E03C0F122D3C22700B61C00 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		1E03C0F322D3C42800B61C00 /* TransactionParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionParameters.swift; sourceTree = "<group>"; };
+		1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
+		1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		1E3F62BC22CF82C40054307D /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		1E3F62BE22CF964C0054307D /* PicPayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayButton.swift; sourceTree = "<group>"; };
 		1E3F62C122CF990B0054307D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1E3F62C422D375540054307D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1E3F62C722D3AF150054307D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1EAB510222CE645200A0E036 /* Desafio PicPay iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio PicPay iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB510522CE645200A0E036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EAB510A22CE645200A0E036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +109,8 @@
 			children = (
 				1E3F62BC22CF82C40054307D /* CustomViewController.swift */,
 				1E3F62BE22CF964C0054307D /* PicPayButton.swift */,
+				1E03C0F122D3C22700B61C00 /* JSONDecoder.swift */,
+				1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -101,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				1E3F62C122CF990B0054307D /* UIColor+Extension.swift */,
+				1E03C0EF22D3C1D800B61C00 /* DataRequest+Extension.swift */,
+				1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */,
+				1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -111,6 +132,16 @@
 				1E3F62C422D375540054307D /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		1E3F62C622D3AEFE0054307D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E3F62C722D3AF150054307D /* UserModel.swift */,
+				1E03C0ED22D3C0C100B61C00 /* PaymentModel.swift */,
+				1E03C0F322D3C42800B61C00 /* TransactionParameters.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1EAB50F922CE645200A0E036 = {
@@ -136,6 +167,7 @@
 		1EAB510422CE645200A0E036 /* Desafio PicPay iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1E3F62C622D3AEFE0054307D /* Models */,
 				1E3F62C322D374520054307D /* Service */,
 				1E3F62C022CF98FA0054307D /* Extension */,
 				1E3F62BB22CF82AA0054307D /* Common */,
@@ -387,14 +419,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */,
+				1E03C0F022D3C1D800B61C00 /* DataRequest+Extension.swift in Sources */,
+				1E03C0FA22D4A95200B61C00 /* CustomSearchBar.swift in Sources */,
 				1EAB512A22CE6C4400A0E036 /* ContactTableViewCell.swift in Sources */,
 				1EAB513722CE6DB700A0E036 /* ContactListViewController.swift in Sources */,
+				1E03C0F622D40F2200B61C00 /* ImageView+Extension.swift in Sources */,
 				1E3F62C222CF990B0054307D /* UIColor+Extension.swift in Sources */,
+				1E03C0F422D3C42800B61C00 /* TransactionParameters.swift in Sources */,
+				1E03C0FC22D4CE7700B61C00 /* String+Extension.swift in Sources */,
+				1E03C0EE22D3C0C100B61C00 /* PaymentModel.swift in Sources */,
 				1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */,
+				1E3F62C822D3AF150054307D /* UserModel.swift in Sources */,
 				1E3F62C522D375540054307D /* Service.swift in Sources */,
 				1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */,
 				1EAB513222CE6D6500A0E036 /* InputValueViewController.swift in Sources */,
 				1EAB512F22CE6C9900A0E036 /* CardViewController.swift in Sources */,
+				1E03C0F222D3C22700B61C00 /* JSONDecoder.swift in Sources */,
 				1EAB513922CE6F9200A0E036 /* AddNewCardViewController.swift in Sources */,
 				1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */,
 				1EAB513522CE6D7B00A0E036 /* DetailViewController.swift in Sources */,
