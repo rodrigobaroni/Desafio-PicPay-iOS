@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VJQ-aq-qav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,16 +13,16 @@
         <!--Contact List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ContactListViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactListViewController" id="BYZ-38-t0r" customClass="ContactListViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="457"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amV-HW-lEe">
-                                <rect key="frame" x="0.0" y="56" width="320" height="401"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amV-HW-lEe">
+                                <rect key="frame" x="0.0" y="76" width="320" height="492"/>
                                 <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eKd-Ay-QM4" customClass="ContactTableViewCell" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" focusStyle="custom" id="eKd-Ay-QM4" customClass="ContactTableViewCell" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eKd-Ay-QM4" id="byS-Ol-ygi">
@@ -32,8 +32,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="A quem você deseja pagar" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-rV-CTO" customClass="CustomSearchBar" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                            <searchBar contentMode="redraw" placeholder="A quem você deseja pagar?" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-rV-CTO" customClass="CustomSearchBar" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="fFo-hd-fCx"/>
                                 </constraints>
@@ -68,28 +68,28 @@
         <!--Add New Card View Controller-->
         <scene sceneID="m25-08-8pP">
             <objects>
-                <viewController id="6Mv-YB-Jow" customClass="AddNewCardViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewCardViewController" id="6Mv-YB-Jow" customClass="AddNewCardViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XfI-Ma-f56">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="JVT-yR-67P">
-                                <rect key="frame" x="110" y="94" width="100" height="70"/>
+                                <rect key="frame" x="110" y="147" width="100" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="N2B-2H-kn7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-fW-EA5">
-                                <rect key="frame" x="20" y="196" width="280" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre um cartão de crédito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-fW-EA5">
+                                <rect key="frame" x="0.0" y="249" width="320" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="srJ-Wl-UGi"/>
+                                    <constraint firstAttribute="height" constant="70" id="srJ-Wl-UGi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-Cd-0WV">
-                                <rect key="frame" x="36" y="276" width="248" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de crédito pessoal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-Cd-0WV">
+                                <rect key="frame" x="36" y="335" width="248" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="wQH-6A-pah"/>
                                 </constraints>
@@ -98,24 +98,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-ZD-1fE" customClass="PicPayButton" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="440" width="288" height="48"/>
+                                <rect key="frame" x="16" y="504" width="288" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Qqn-3X-RWj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cadastrar Cartão"/>
+                                <connections>
+                                    <action selector="addNewCardAction:" destination="6Mv-YB-Jow" eventType="touchUpInside" id="bcU-aA-znV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="U2n-iq-Hdd" firstAttribute="bottom" secondItem="Na1-ZD-1fE" secondAttribute="bottom" constant="16" id="7tW-ge-V2C"/>
                             <constraint firstItem="U2n-iq-Hdd" firstAttribute="trailing" secondItem="JVT-yR-67P" secondAttribute="trailing" constant="110" id="Jxo-N4-7IX"/>
-                            <constraint firstItem="U2n-iq-Hdd" firstAttribute="trailing" secondItem="HDb-fW-EA5" secondAttribute="trailing" constant="20" id="KEs-cz-A9w"/>
+                            <constraint firstItem="U2n-iq-Hdd" firstAttribute="trailing" secondItem="HDb-fW-EA5" secondAttribute="trailing" id="KEs-cz-A9w"/>
                             <constraint firstItem="A9t-Cd-0WV" firstAttribute="leading" secondItem="U2n-iq-Hdd" secondAttribute="leading" constant="36" id="Rw6-4e-DvR"/>
                             <constraint firstItem="Na1-ZD-1fE" firstAttribute="leading" secondItem="U2n-iq-Hdd" secondAttribute="leading" constant="16" id="Zbt-RV-dvZ"/>
                             <constraint firstItem="U2n-iq-Hdd" firstAttribute="trailing" secondItem="A9t-Cd-0WV" secondAttribute="trailing" constant="36" id="ZyD-nT-DZG"/>
-                            <constraint firstItem="HDb-fW-EA5" firstAttribute="leading" secondItem="U2n-iq-Hdd" secondAttribute="leading" constant="20" id="a3o-oH-LJb"/>
-                            <constraint firstItem="JVT-yR-67P" firstAttribute="top" secondItem="U2n-iq-Hdd" secondAttribute="top" constant="94" id="ae8-bw-pdI"/>
+                            <constraint firstItem="HDb-fW-EA5" firstAttribute="leading" secondItem="U2n-iq-Hdd" secondAttribute="leading" id="a3o-oH-LJb"/>
+                            <constraint firstItem="HDb-fW-EA5" firstAttribute="centerY" secondItem="XfI-Ma-f56" secondAttribute="centerY" id="aGi-2r-eqf"/>
                             <constraint firstItem="JVT-yR-67P" firstAttribute="leading" secondItem="U2n-iq-Hdd" secondAttribute="leading" constant="110" id="dZA-A6-MBh"/>
                             <constraint firstItem="U2n-iq-Hdd" firstAttribute="trailing" secondItem="Na1-ZD-1fE" secondAttribute="trailing" constant="16" id="ir9-ab-2SK"/>
                             <constraint firstItem="A9t-Cd-0WV" firstAttribute="top" secondItem="HDb-fW-EA5" secondAttribute="bottom" constant="16" id="m8X-ni-XGQ"/>
@@ -132,13 +135,13 @@
         <!--Card View Controller-->
         <scene sceneID="g0V-Ab-BSh">
             <objects>
-                <viewController id="fEL-yD-Knd" customClass="CardViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardViewController" id="fEL-yD-Knd" customClass="CardViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4H-ge-nXJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-cz-L1I">
-                                <rect key="frame" x="24" y="16" width="272" height="32"/>
+                                <rect key="frame" x="24" y="36" width="272" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ONb-lg-21w"/>
                                 </constraints>
@@ -147,7 +150,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fuv-KL-1C3" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="88" width="272" height="45"/>
+                                <rect key="frame" x="24" y="108" width="272" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RcN-NN-NhK"/>
                                 </constraints>
@@ -180,64 +183,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Número do cartão"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-AK-TgJ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="172" y="306" width="124" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2cL-mK-PQU"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="CVV"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CVV"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4l-Bx-OGo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="306" width="124" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="9ef-Fw-xsU"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Vencimento"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
-                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
-                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Vencimento"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-I5-Fya" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="197" width="272" height="45"/>
+                                <rect key="frame" x="24" y="217" width="272" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="NQp-El-RU5"/>
                                     <constraint firstAttribute="height" constant="45" id="cYq-O6-6Yj"/>
@@ -265,14 +212,73 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Nome do titular"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4l-Bx-OGo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="24" y="326" width="124" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9ef-Fw-xsU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Vencimento"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Vencimento"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-AK-TgJ" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="172" y="326" width="124" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2cL-mK-PQU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="CVV"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CVV"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPv-n0-wAX" customClass="PicPayButton" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="440" width="288" height="48"/>
+                                <rect key="frame" x="16" y="504" width="288" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="ZWq-LE-DNE"/>
                                     <constraint firstAttribute="height" constant="48" id="x6K-EW-2Iw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="saveCardAction:" destination="fEL-yD-Knd" eventType="touchUpInside" id="ko7-t5-x2Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -295,51 +301,42 @@
                             <constraint firstItem="aPv-n0-wAX" firstAttribute="leading" secondItem="nN6-9t-Iid" secondAttribute="leading" constant="16" id="r7u-vT-9sH"/>
                             <constraint firstItem="DhM-I5-Fya" firstAttribute="leading" secondItem="nN6-9t-Iid" secondAttribute="leading" constant="24" id="wLs-v7-lJF"/>
                             <constraint firstItem="OTq-AK-TgJ" firstAttribute="leading" secondItem="g4l-Bx-OGo" secondAttribute="trailing" constant="24" id="y64-ys-8We"/>
+                            <constraint firstItem="aPv-n0-wAX" firstAttribute="top" secondItem="g4l-Bx-OGo" secondAttribute="bottom" priority="250" constant="133" id="zP2-8Y-6Ve"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nN6-9t-Iid"/>
                     </view>
                     <navigationItem key="navigationItem" id="QGH-iZ-ngo"/>
+                    <connections>
+                        <outlet property="cardCVVTextField" destination="OTq-AK-TgJ" id="Ux0-B8-Qsd"/>
+                        <outlet property="cardExpiryDateTextField" destination="g4l-Bx-OGo" id="mjF-6M-S7e"/>
+                        <outlet property="cardNameTextField" destination="DhM-I5-Fya" id="Mrj-ff-Vxb"/>
+                        <outlet property="cardNumberTextField" destination="Fuv-KL-1C3" id="8HI-fF-dGV"/>
+                        <outlet property="saveButtonBottomConstraint" destination="1hJ-wl-SQn" id="l4E-pI-0GH"/>
+                        <outlet property="saveButtonUpConstraint" destination="zP2-8Y-6Ve" id="6mW-gN-36u"/>
+                        <outlet property="saveCardButton" destination="aPv-n0-wAX" id="jka-vh-XEM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdL-Po-ccx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="1531"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cHG-Jh-4a7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VJQ-aq-qav" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="3BF-iM-YhP">
-                        <rect key="frame" x="0.0" y="20" width="320" height="91"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2cS-EY-sPN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yOZ-4V-omY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="191" y="104"/>
-        </scene>
         <!--Input Value View Controller-->
         <scene sceneID="e5H-fk-4gB">
             <objects>
-                <viewController id="Jl3-lJ-lht" customClass="InputValueViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputValueViewController" id="Jl3-lJ-lht" customClass="InputValueViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wYA-hE-zAG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcm-5q-fVv">
-                                <rect key="frame" x="140" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="140" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="5Ja-Pv-c8g"/>
                                     <constraint firstAttribute="height" constant="40" id="Zzb-Ai-jfc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE7-QL-LsL">
-                                <rect key="frame" x="108" y="48" width="104" height="17"/>
+                                <rect key="frame" x="108" y="68" width="104" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="5L0-rI-Y98"/>
                                 </constraints>
@@ -348,7 +345,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R$ 0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9N-gT-UrY">
-                                <rect key="frame" x="80" y="97" width="160" height="65"/>
+                                <rect key="frame" x="80" y="117" width="160" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="nut-D8-W1c"/>
                                 </constraints>
@@ -357,7 +354,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CH-ER-5pm" customClass="PicPayButton" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="440" width="288" height="48"/>
+                                <rect key="frame" x="16" y="504" width="288" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="M13-iV-180"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="b6F-AS-v2I"/>
@@ -367,7 +364,7 @@
                                 <state key="normal" title="Pagar"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNC-P6-gCp">
-                                <rect key="frame" x="72" y="202" width="176" height="17"/>
+                                <rect key="frame" x="72" y="222" width="176" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastercard 1739 •" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-Dn-Jvy">
                                         <rect key="frame" x="0.0" y="0.0" width="118.5" height="17"/>
@@ -424,7 +421,7 @@
         <!--Detail View Controller-->
         <scene sceneID="c5X-B9-nPM">
             <objects>
-                <viewController id="zHb-Im-HE1" customClass="DetailViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="zHb-Im-HE1" customClass="DetailViewController" customModule="Desafio_PicPay_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t1x-b3-APk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,63 +550,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTE-6j-uPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="2996"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yZ5-sj-gch">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qOz-dD-bL6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="2NB-K7-CD3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6Mv-YB-Jow" kind="relationship" relationship="rootViewController" id="kAb-2F-Vem"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="43D-EV-cy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="191.25" y="832.3943661971831"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Uck-hX-IJP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0xe-kG-dKA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="B2s-pd-kpq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fEL-yD-Knd" kind="relationship" relationship="rootViewController" id="C5o-Nj-ekH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QFM-PQ-UvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="193" y="1531"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="CmM-1V-JpW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1cn-EW-sNi" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="iX5-Aa-5LG">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Jl3-lJ-lht" kind="relationship" relationship="rootViewController" id="VhJ-kT-dkW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3h3-I9-zTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="191.25" y="2251.0563380281692"/>
         </scene>
     </scenes>
     <resources>

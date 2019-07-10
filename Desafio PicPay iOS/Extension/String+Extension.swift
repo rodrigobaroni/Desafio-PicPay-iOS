@@ -17,4 +17,16 @@ extension String {
         }
         return text
     }
+    
+    func trim() -> String {
+        return self.trimmingCharacters(in: .whitespaces)
+    }
+    
+    func returnOnlyNumbers() -> String {
+        return String(self.filter { "0123456789".contains($0)})
+    }
+    
+    mutating func limitSize(maxCharacteres: Int) {
+        self = String(self.prefix(maxCharacteres))
+    }
 }

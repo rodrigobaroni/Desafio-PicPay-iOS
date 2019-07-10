@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct UserModel: Codable {
-    let id: Int?
+    let id: Int? 
     let name: String?
     let img: String?
     let username: String?
@@ -27,32 +27,7 @@ extension UserModel {
         }
         try self.init(data: data)
     }
-    
-    init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-    
-    func with(
-        id: Int?? = nil,
-        name: String?? = nil,
-        img: String?? = nil,
-        username: String?? = nil
-        ) -> UserModel {
-        return UserModel(
-            id: id ?? self.id,
-            name: name ?? self.name,
-            img: img ?? self.img,
-            username: username ?? self.username
-        )
-    }
-    
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-    
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
+
 }
 
 typealias User = [UserModel]
@@ -69,15 +44,4 @@ extension Array where Element == User.Element {
         try self.init(data: data)
     }
     
-    init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-    
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-    
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
 }

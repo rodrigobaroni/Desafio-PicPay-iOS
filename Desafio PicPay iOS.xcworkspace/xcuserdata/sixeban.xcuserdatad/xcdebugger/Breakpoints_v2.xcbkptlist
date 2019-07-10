@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Desafio PicPay iOS/ContactList/ContactTableViewCell.swift"
-            timestampString = "584376195.0656689"
+            filePath = "Desafio PicPay iOS/Card/CardViewController.swift"
+            timestampString = "584454675.573032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "ContactTableViewCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Desafio_PicPay_iOS.ContactTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Desafio_PicPay_iOS.ContactTableViewCell"
-                  moduleName = "Desafio PicPay iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sixeban/Desktop/Desafio/Desafio%20PicPay%20iOS/Desafio%20PicPay%20iOS/ContactList/ContactTableViewCell.swift"
-                  timestampString = "584375650.2639821"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "392">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Desafio_PicPay_iOS.ContactTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Desafio_PicPay_iOS.ContactTableViewCell&gt;"
-                  moduleName = "Desafio PicPay iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sixeban/Desktop/Desafio/Desafio%20PicPay%20iOS/Desafio%20PicPay%20iOS/ContactList/ContactTableViewCell.swift"
-                  timestampString = "584375650.2660511"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "363">
-               </Location>
-            </Locations>
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "saveCardAction(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Desafio PicPay iOS/Common/CustomSearchBar.swift"
-            timestampString = "584376195.066175"
+            filePath = "Desafio PicPay iOS/Card/CardViewController.swift"
+            timestampString = "584454675.573112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "draw(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "saveCardAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Desafio PicPay iOS/Card/CardViewController.swift"
+            timestampString = "584454675.573173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "saveCardAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

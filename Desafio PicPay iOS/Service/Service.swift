@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import AlamofireImage
 
 private struct ServiceURLRequest {
     static let users = "http://careers.picpay.com/tests/mobdev/users"
@@ -20,7 +19,6 @@ class Service {
     static func users(completion: @escaping (_ response: User) -> Void) {
         Alamofire.request(ServiceURLRequest.users, method: .get)
             .validate(statusCode: 200..<300).responseUser(completionHandler: { (response) in
-                
             if let userModel = response.result.value {
                 completion(userModel)
             }

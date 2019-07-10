@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ContactListViewController: CustomViewController {
+class ContactListViewController: CustomViewController, Storyboarded {
 
+    weak var coordinator: MainCoordinator?
+    
     @IBOutlet private(set) weak var tableView: UITableView?
     @IBOutlet private(set) weak var searchBar: CustomSearchBar?
     
@@ -72,7 +74,13 @@ extension ContactListViewController: UISearchBarDelegate {
 
 extension ContactListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        DataStorage.retriveCardSaved { [weak self] card in
+            if let cardData = card {
+                self?.coordinator?.inputValue()
+                return
+            }
+            self?.coordinator?.addNewCard()
+        }
     }
 }
 

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class InputValueViewController: UIViewController {
+class InputValueViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

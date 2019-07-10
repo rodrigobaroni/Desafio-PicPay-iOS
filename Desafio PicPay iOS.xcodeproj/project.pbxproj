@@ -14,6 +14,12 @@
 		1E03C0F622D40F2200B61C00 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */; };
 		1E03C0FA22D4A95200B61C00 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */; };
 		1E03C0FC22D4CE7700B61C00 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */; };
+		1E03C0FE22D4EBB800B61C00 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0FD22D4EBB800B61C00 /* DataStorage.swift */; };
+		1E03C10022D4ECE700B61C00 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C0FF22D4ECE700B61C00 /* CardModel.swift */; };
+		1E03C10322D4F79500B61C00 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10222D4F79500B61C00 /* Coordinator.swift */; };
+		1E03C10522D4FA5B00B61C00 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10422D4FA5B00B61C00 /* Storyboarded.swift */; };
+		1E03C10722D4FBAF00B61C00 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10622D4FBAF00B61C00 /* MainCoordinator.swift */; };
+		1E03C10922D50FA200B61C00 /* String+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10822D50FA200B61C00 /* String+Mask.swift */; };
 		1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BC22CF82C40054307D /* CustomViewController.swift */; };
 		1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BE22CF964C0054307D /* PicPayButton.swift */; };
 		1E3F62C222CF990B0054307D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C122CF990B0054307D /* UIColor+Extension.swift */; };
@@ -54,6 +60,12 @@
 		1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
 		1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1E03C0FD22D4EBB800B61C00 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		1E03C0FF22D4ECE700B61C00 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		1E03C10222D4F79500B61C00 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1E03C10422D4FA5B00B61C00 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		1E03C10622D4FBAF00B61C00 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1E03C10822D50FA200B61C00 /* String+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Mask.swift"; sourceTree = "<group>"; };
 		1E3F62BC22CF82C40054307D /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		1E3F62BE22CF964C0054307D /* PicPayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicPayButton.swift; sourceTree = "<group>"; };
 		1E3F62C122CF990B0054307D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -104,6 +116,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E03C10122D4F78600B61C00 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1E03C10222D4F79500B61C00 /* Coordinator.swift */,
+				1E03C10422D4FA5B00B61C00 /* Storyboarded.swift */,
+				1E03C10622D4FBAF00B61C00 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		1E3F62BB22CF82AA0054307D /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +133,7 @@
 				1E3F62BE22CF964C0054307D /* PicPayButton.swift */,
 				1E03C0F122D3C22700B61C00 /* JSONDecoder.swift */,
 				1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */,
+				1E03C0FD22D4EBB800B61C00 /* DataStorage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -122,6 +145,7 @@
 				1E03C0EF22D3C1D800B61C00 /* DataRequest+Extension.swift */,
 				1E03C0F522D40F2200B61C00 /* ImageView+Extension.swift */,
 				1E03C0FB22D4CE7700B61C00 /* String+Extension.swift */,
+				1E03C10822D50FA200B61C00 /* String+Mask.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -140,6 +164,7 @@
 				1E3F62C722D3AF150054307D /* UserModel.swift */,
 				1E03C0ED22D3C0C100B61C00 /* PaymentModel.swift */,
 				1E03C0F322D3C42800B61C00 /* TransactionParameters.swift */,
+				1E03C0FF22D4ECE700B61C00 /* CardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +192,7 @@
 		1EAB510422CE645200A0E036 /* Desafio PicPay iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1E03C10122D4F78600B61C00 /* Coordinator */,
 				1E3F62C622D3AEFE0054307D /* Models */,
 				1E3F62C322D374520054307D /* Service */,
 				1E3F62C022CF98FA0054307D /* Extension */,
@@ -419,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */,
+				1E03C10022D4ECE700B61C00 /* CardModel.swift in Sources */,
 				1E03C0F022D3C1D800B61C00 /* DataRequest+Extension.swift in Sources */,
 				1E03C0FA22D4A95200B61C00 /* CustomSearchBar.swift in Sources */,
 				1EAB512A22CE6C4400A0E036 /* ContactTableViewCell.swift in Sources */,
@@ -430,14 +457,19 @@
 				1E03C0EE22D3C0C100B61C00 /* PaymentModel.swift in Sources */,
 				1E3F62BF22CF964C0054307D /* PicPayButton.swift in Sources */,
 				1E3F62C822D3AF150054307D /* UserModel.swift in Sources */,
+				1E03C10722D4FBAF00B61C00 /* MainCoordinator.swift in Sources */,
+				1E03C10922D50FA200B61C00 /* String+Mask.swift in Sources */,
+				1E03C0FE22D4EBB800B61C00 /* DataStorage.swift in Sources */,
 				1E3F62C522D375540054307D /* Service.swift in Sources */,
 				1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */,
 				1EAB513222CE6D6500A0E036 /* InputValueViewController.swift in Sources */,
+				1E03C10322D4F79500B61C00 /* Coordinator.swift in Sources */,
 				1EAB512F22CE6C9900A0E036 /* CardViewController.swift in Sources */,
 				1E03C0F222D3C22700B61C00 /* JSONDecoder.swift in Sources */,
 				1EAB513922CE6F9200A0E036 /* AddNewCardViewController.swift in Sources */,
 				1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */,
 				1EAB513522CE6D7B00A0E036 /* DetailViewController.swift in Sources */,
+				1E03C10522D4FA5B00B61C00 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
