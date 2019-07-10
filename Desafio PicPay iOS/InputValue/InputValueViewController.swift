@@ -11,10 +11,11 @@ import UIKit
 class InputValueViewController: UIViewController, Storyboarded {
 
     weak var coordinator: MainCoordinator?
+    var user: UserModel?
+    var card: CardModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

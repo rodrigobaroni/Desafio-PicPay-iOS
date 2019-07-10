@@ -16,6 +16,8 @@ class CardViewController: CustomViewController, Storyboarded {
     private var isKeyboardUp: Bool = false
     private var normalConstraint = CGFloat(16)
     var cardModel: CardModel?
+    var user: UserModel?
+    
     var isSaveButtonEnable: Bool = false {
         didSet {
             isSaveButtonEnable = allTextFieldsAreFilled()
@@ -74,9 +76,8 @@ class CardViewController: CustomViewController, Storyboarded {
         self.createCardModel()
         DataStorage.saveCardWith(data: self.cardModel) { [weak self] sucess in
             if sucess {
-                self?.coordinator?.inputValue()
+                self?.coordinator?.inputValue(user: self?.user, card: self?.cardModel)
             }
-            print(sucess)
         }
     }
 }

@@ -11,13 +11,13 @@ import UIKit
 
 struct TransactionParameters: Codable {
     
-    let cardNumber: String?
-    let cvv: Int?
-    let value: Double?
-    let expiryDate: String?
-    let destinationUserID: Int?
+    var cardNumber: String?
+    var cvv: Int?
+    var value: Double?
+    var expiryDate: String?
+    var destinationUserID: Int?
     
-    init(cardNumber: String, cvv: Int, value: Double, expiryDate: String, destination: Int) {
+    init(cardNumber: String?, cvv: Int?, value: Double?, expiryDate: String?, destination: Int?) {
         self.cardNumber = cardNumber
         self.cvv = cvv
         self.value = value

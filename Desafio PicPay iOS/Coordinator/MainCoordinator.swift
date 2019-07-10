@@ -25,23 +25,27 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func addNewCard() {
+    func addNewCard(user: UserModel?) {
         let vc = AddNewCardViewController.instantiate()
         vc.coordinator = self
+        vc.user = user
         setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showCard() {
+    func showCard(user: UserModel?) {
         let vc = CardViewController.instantiate()
         vc.coordinator = self
+        vc.user = user
         setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func inputValue() {
+    func inputValue(user: UserModel?, card: CardModel?) {
         let vc = InputValueViewController.instantiate()
         vc.coordinator = self
+        vc.user = user
+        vc.card = card
         setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }

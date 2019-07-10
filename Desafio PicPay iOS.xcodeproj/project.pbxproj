@@ -27,7 +27,6 @@
 		1E3F62C822D3AF150054307D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62C722D3AF150054307D /* UserModel.swift */; };
 		1EAB510622CE645200A0E036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510522CE645200A0E036 /* AppDelegate.swift */; };
 		1EAB510B22CE645200A0E036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB510922CE645200A0E036 /* Main.storyboard */; };
-		1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB510C22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld */; };
 		1EAB511022CE645400A0E036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB510F22CE645400A0E036 /* Assets.xcassets */; };
 		1EAB511322CE645400A0E036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB511122CE645400A0E036 /* LaunchScreen.storyboard */; };
 		1EAB511E22CE645400A0E036 /* Desafio_PicPay_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB511D22CE645400A0E036 /* Desafio_PicPay_iOSUITests.swift */; };
@@ -74,7 +73,6 @@
 		1EAB510222CE645200A0E036 /* Desafio PicPay iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio PicPay iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB510522CE645200A0E036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EAB510A22CE645200A0E036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1EAB510D22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Desafio_PicPay_iOS.xcdatamodel; sourceTree = "<group>"; };
 		1EAB510F22CE645400A0E036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EAB511222CE645400A0E036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EAB511422CE645400A0E036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				1EAB510F22CE645400A0E036 /* Assets.xcassets */,
 				1EAB511122CE645400A0E036 /* LaunchScreen.storyboard */,
 				1EAB511422CE645400A0E036 /* Info.plist */,
-				1EAB510C22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld */,
 			);
 			path = "Desafio PicPay iOS";
 			sourceTree = "<group>";
@@ -467,7 +464,6 @@
 				1EAB512F22CE6C9900A0E036 /* CardViewController.swift in Sources */,
 				1E03C0F222D3C22700B61C00 /* JSONDecoder.swift in Sources */,
 				1EAB513922CE6F9200A0E036 /* AddNewCardViewController.swift in Sources */,
-				1EAB510E22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld in Sources */,
 				1EAB513522CE6D7B00A0E036 /* DetailViewController.swift in Sources */,
 				1E03C10522D4FA5B00B61C00 /* Storyboarded.swift in Sources */,
 			);
@@ -740,19 +736,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1EAB510C22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1EAB510D22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodel */,
-			);
-			currentVersion = 1EAB510D22CE645200A0E036 /* Desafio_PicPay_iOS.xcdatamodel */;
-			path = Desafio_PicPay_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1EAB50FA22CE645200A0E036 /* Project object */;
 }

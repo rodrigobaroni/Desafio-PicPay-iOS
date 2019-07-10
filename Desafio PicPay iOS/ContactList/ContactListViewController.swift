@@ -70,16 +70,18 @@ extension ContactListViewController: UISearchBarDelegate {
         }
         self.tableView?.reloadData()
     }
+
 }
 
 extension ContactListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = self.currentSearchContact[indexPath.row]
         DataStorage.retriveCardSaved { [weak self] card in
             if let cardData = card {
-                self?.coordinator?.inputValue()
+                self?.coordinator?.inputValue(user: user, card: cardData)
                 return
             }
-            self?.coordinator?.addNewCard()
+            self?.coordinator?.addNewCard(user: user)
         }
     }
 }

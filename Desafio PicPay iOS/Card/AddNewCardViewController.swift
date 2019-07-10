@@ -11,6 +11,7 @@ import UIKit
 class AddNewCardViewController: UIViewController, Storyboarded {
 
     weak var coordinator: MainCoordinator?
+    var user: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class AddNewCardViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func addNewCardAction(_ sender: Any) {
-        coordinator?.showCard()
+        coordinator?.showCard(user: self.user)
     }
 
 }
