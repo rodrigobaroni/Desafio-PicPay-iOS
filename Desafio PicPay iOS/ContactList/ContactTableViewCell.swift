@@ -23,10 +23,6 @@ class ContactTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func setupCell() {
         self.backgroundColor = UIColor.picPayBlack
     }

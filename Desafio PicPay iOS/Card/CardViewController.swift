@@ -37,8 +37,6 @@ class CardViewController: CustomViewController, Storyboarded {
         super.viewDidLoad()
         self.setupTextFields()
         self.saveCardButton?.isHidden = !isSaveButtonEnable
-        
-        //TODO: Handler keyboard height
     }
 
     private func setupTextFields() {

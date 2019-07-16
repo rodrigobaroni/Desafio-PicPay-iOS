@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 struct PaymentModel: Codable {
     let transaction: Transaction?
