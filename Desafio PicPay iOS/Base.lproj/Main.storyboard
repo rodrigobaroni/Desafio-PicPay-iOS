@@ -325,12 +325,12 @@
                                     <constraint firstAttribute="height" constant="40" id="Zzb-Ai-jfc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE7-QL-LsL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE7-QL-LsL">
                                 <rect key="frame" x="108" y="68" width="104" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="5L0-rI-Y98"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -403,6 +403,14 @@
                         <viewLayoutGuide key="safeArea" id="uHf-bj-6Ic"/>
                     </view>
                     <navigationItem key="navigationItem" id="CiO-tv-6oz"/>
+                    <connections>
+                        <outlet property="cardNameLabel" destination="Tfh-Dn-Jvy" id="U8S-sl-tut"/>
+                        <outlet property="paymentButton" destination="3CH-ER-5pm" id="ZZv-6P-sx6"/>
+                        <outlet property="paymentButtonConstraint" destination="Cj8-jh-kE3" id="TFk-Sn-tiy"/>
+                        <outlet property="userImageView" destination="hcm-5q-fVv" id="Irp-aX-sVZ"/>
+                        <outlet property="userNickNameLabel" destination="WE7-QL-LsL" id="ebB-r2-RGW"/>
+                        <outlet property="valueTextField" destination="V9N-gT-UrY" id="Fu6-7B-zkl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvq-fz-Ptj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
