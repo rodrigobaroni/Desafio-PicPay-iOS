@@ -21,6 +21,11 @@ class InputValueViewController: UIViewController, Storyboarded {
     var user: UserModel?
     var card: CardModel?
     var value: Double?
+    var isPaymentButtonEnable: Bool = false {
+        didSet {
+            self.paymentButton?.isEnabled = isPaymentButtonEnable
+        }
+    }
     
     private var bottomConstraintPaymentButtonNormal = CGFloat(16)
     private var keyboardHeight: CGFloat? {
@@ -88,12 +93,18 @@ class InputValueViewController: UIViewController, Storyboarded {
             return
         }
         self.cardNameLabel?.text = "Cartão final " + cardNumber
+        self.paymentButton?.isEnabled = isPaymentButtonEnable
     }
     
     @objc func moneyTextFieldDidChange(_ textField: UITextField) {
         if let amountString = self.valueTextField?.text?.setupMoneyValue(size: 54, customColor: .picPayGreen) {
             self.value = amountString.stringText?.toDoubleValue()
             self.valueTextField?.attributedText = amountString.attributedText
+            if (value ?? 0.0) > 0.0 {
+                isPaymentButtonEnable = true
+                return
+            }
+            isPaymentButtonEnable = false
         }
     }
     

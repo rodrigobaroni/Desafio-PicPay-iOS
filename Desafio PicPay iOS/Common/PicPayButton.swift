@@ -40,4 +40,14 @@ import UIKit
         super.setTitle(title, for: state)
     }
     
+    override public var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                self.backgroundColor = UIColor.picPayGreen
+                return
+            }
+            self.backgroundColor = UIColor.picPayWhiteOff60
+        }
+    }
+    
 }
