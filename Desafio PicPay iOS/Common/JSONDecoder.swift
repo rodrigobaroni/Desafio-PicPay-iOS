@@ -10,16 +10,12 @@ import Foundation
 
 func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()
-    if #available(iOS 10.0, *) {
-        decoder.dateDecodingStrategy = .iso8601
-    }
+    decoder.dateDecodingStrategy = .iso8601
     return decoder
 }
 
 func newJSONEncoder() -> JSONEncoder {
     let encoder = JSONEncoder()
-    if #available(iOS 10.0, *) {
-        encoder.dateEncodingStrategy = .iso8601
-    }
+    encoder.dateEncodingStrategy = .iso8601
     return encoder
 }

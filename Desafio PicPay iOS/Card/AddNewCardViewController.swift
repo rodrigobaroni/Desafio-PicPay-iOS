@@ -14,7 +14,7 @@ class AddNewCardViewController: UIViewController, Storyboarded {
     var user: UserModel?
     
     @IBAction func addNewCardAction(_ sender: Any) {
-        coordinator?.showCard(user: self.user)
+        coordinator?.showCard(user: self.user, card: nil)
     }
 
 }

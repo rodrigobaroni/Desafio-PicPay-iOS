@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
@@ -19,9 +19,10 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        navigationController.delegate = self
         let vc = ContactListViewController.instantiate()
         vc.coordinator = self
-        setToUseLargeTitle(true)
+        self.setToUseLargeTitle(true)
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -29,15 +30,16 @@ class MainCoordinator: Coordinator {
         let vc = AddNewCardViewController.instantiate()
         vc.coordinator = self
         vc.user = user
-        setToUseLargeTitle()
+        self.setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showCard(user: UserModel?) {
+    func showCard(user: UserModel?, card: CardModel?) {
         let vc = CardViewController.instantiate()
         vc.coordinator = self
         vc.user = user
-        setToUseLargeTitle()
+        vc.cardModel = card
+        self.setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -46,13 +48,42 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         vc.user = user
         vc.card = card
-        setToUseLargeTitle()
+        self.setToUseLargeTitle()
         navigationController.pushViewController(vc, animated: true)
     }
     
-    private func setToUseLargeTitle(_ show: Bool = false) {
-        if #available(iOS 11.0, *) {
-            self.navigationController.navigationBar.prefersLargeTitles = show
+    func detailPayment(details: PaymentModel?) {
+        let vc = DetailViewController.instantiate()
+        vc.coordinator = self
+        vc.details = details
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.setToUseLargeTitle()
+        navigationController.present(vc, animated: true, completion: nil)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
         }
     }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        if navigationController.viewControllers.contains(fromViewController) {
+            if let addCardViewController = fromViewController as? CardViewController {
+                childDidFinish(addCardViewController.coordinator)
+            }
+            if let inputValueViewController = fromViewController as? InputValueViewController {
+                childDidFinish(inputValueViewController.coordinator)
+            }
+            return
+        }
+        
+    }
+    
 }

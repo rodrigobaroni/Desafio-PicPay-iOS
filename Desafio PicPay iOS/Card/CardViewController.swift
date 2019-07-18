@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import CreditCardValidator
 
 class CardViewController: CustomViewController, Storyboarded {
 
@@ -15,6 +16,7 @@ class CardViewController: CustomViewController, Storyboarded {
     
     private var isKeyboardUp: Bool = false
     private var normalConstraint = CGFloat(16)
+    var isEditingCard: Bool = false
     var cardModel: CardModel?
     var user: UserModel?
     
@@ -36,6 +38,7 @@ class CardViewController: CustomViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTextFields()
+        self.fillAllTextfield()
         self.saveCardButton?.isHidden = !isSaveButtonEnable
     }
 
@@ -44,6 +47,23 @@ class CardViewController: CustomViewController, Storyboarded {
         self.cardNameTextField?.delegate = self
         self.cardExpiryDateTextField?.delegate = self
         self.cardCVVTextField?.delegate = self
+    }
+    
+    private func fillAllTextfield() {
+        if let card = cardModel,
+            let name = card.cardName,
+            let number = card.cardNumber,
+            let expiryDate = card.expiryDate,
+            let cvv = card.cvv {
+                isEditingCard = true
+                isSaveButtonEnable = true
+                self.cardNumberTextField?.text = number
+                self.cardNameTextField?.text = name
+                self.cardExpiryDateTextField?.text = expiryDate
+                self.cardCVVTextField?.text = "\(cvv)"
+            return
+        }
+        isEditingCard = false
     }
     
     private func allTextFieldsAreFilled() -> Bool {
@@ -61,12 +81,18 @@ class CardViewController: CustomViewController, Storyboarded {
     }
     
     func createCardModel() {
+        let cardType = CreditCardValidator()
+
         if let cardName = self.cardNameTextField?.text,
             let cardNumber = self.cardNumberTextField?.text,
             let cvv = Int(self.cardCVVTextField?.text ?? ""),
             let date = self.cardExpiryDateTextField?.text {
-            
-            self.cardModel = CardModel(cardNumber: cardNumber, cvv: cvv, cardName: cardName, expiryDate: date)
+        
+            if let flagCard = cardType.type(from: cardNumber) {
+                self.cardModel = CardModel(cardNumber: cardNumber, cvv: cvv, cardName: cardName, expiryDate: date, cardType: flagCard.name)
+                return
+            }
+            self.cardModel = CardModel(cardNumber: cardNumber, cvv: cvv, cardName: cardName, expiryDate: date, cardType: nil)
         }
     }
     

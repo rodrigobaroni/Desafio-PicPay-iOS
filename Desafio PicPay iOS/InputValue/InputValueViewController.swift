@@ -20,9 +20,9 @@ class InputValueViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
     var user: UserModel?
     var card: CardModel?
+    var value: Double?
     
     private var bottomConstraintPaymentButtonNormal = CGFloat(16)
-    private var sizeOfImageView = CGFloat(40)
     private var keyboardHeight: CGFloat? {
         didSet {
             UIView.animate(withDuration: 0.25, animations: {
@@ -36,13 +36,18 @@ class InputValueViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNotification()
-        self.valueTextField?.becomeFirstResponder()
+        self.setupTextField()
         self.setupLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNotification()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.valueTextField?.resignFirstResponder()
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -62,6 +67,11 @@ class InputValueViewController: UIViewController, Storyboarded {
         self.keyboardHeight = 0
     }
     
+    private func setupTextField() {
+        self.valueTextField?.addTarget(self, action: #selector(moneyTextFieldDidChange), for: .editingChanged)
+        self.valueTextField?.becomeFirstResponder()
+    }
+    
     private func setupLayout() {
         guard let user = user,
             let card = card else {
@@ -69,12 +79,45 @@ class InputValueViewController: UIViewController, Storyboarded {
         }
         self.userNickNameLabel?.text = user.username
         self.userImageView?.downloaded(from: user.img ?? "")
-        let cardName = card.cardName ?? ""
-        let cardNumber = card.cardNumber?.suffix(4) ?? ""
-        self.cardNameLabel?.text = cardName + " " + cardNumber
-        self.userImageView?.layer.cornerRadius = ((self.userImageView?.frame.size.width ?? sizeOfImageView) / 2)
+        self.userImageView?.setRounded()
         self.userImageView?.clipsToBounds = true
         self.userImageView?.setNeedsDisplay()
+        let cardNumber = card.cardNumber?.suffix(4) ?? ""
+        if let cardType = card.cardType {
+            self.cardNameLabel?.text = cardType + " final " + cardNumber
+            return
+        }
+        self.cardNameLabel?.text = "Cartão final " + cardNumber
+    }
+    
+    @objc func moneyTextFieldDidChange(_ textField: UITextField) {
+        if let amountString = self.valueTextField?.text?.setupMoneyValue(size: 54, customColor: .picPayGreen) {
+            self.value = amountString.stringText?.toDoubleValue()
+            self.valueTextField?.attributedText = amountString.attributedText
+        }
+    }
+    
+    private func createTransactionModel() -> TransactionParameters {
+        let transactionParameters = TransactionParameters(cardNumber: card?.cardNumber,
+                                                          cvv: card?.cvv,
+                                                          value: self.value,
+                                                          expiryDate: card?.expiryDate,
+                                                          destination: user?.id)
+        return transactionParameters
+        
+    }
+    
+    
+    @IBAction func paymentAction(_ sender: Any) {
+        let parameters = createTransactionModel()
+        Service.payment(body: parameters) { (paymentModel) in
+            self.coordinator?.detailPayment(details: paymentModel)
+        }
+    }
+    
+    @IBAction func editCardAction(_ sender: Any) {
+        
+        //TODO: editar cartão
     }
 
 }

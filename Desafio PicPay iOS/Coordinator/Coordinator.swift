@@ -9,10 +9,18 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
     
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
     
     func start()
+}
+
+extension Coordinator {
+    func setToUseLargeTitle(_ show: Bool = false) {
+        if #available(iOS 11.0, *) {
+            self.navigationController.navigationBar.prefersLargeTitles = show
+        }
+    }
 }

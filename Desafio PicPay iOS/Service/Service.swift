@@ -25,12 +25,25 @@ class Service {
         })
     }
     
-    static func payment(body: TransactionParameters, completion: @escaping (_ response: PaymentModel) -> Void) {
-        
-        Alamofire.request(ServiceURLRequest.payment, method: .post, parameters: body.dictionaryRepresentation).responsePaymentModel { (response) in
-            if let paymentModel = response.result.value {
-                completion(paymentModel)
-            }
+    static func payment(body: TransactionParameters?, completion: @escaping (_ response: PaymentModel?) -> Void) {
+        guard let parameters = body else {
+            completion(nil)
+            return
+        }
+        let bodyParameters = parameters.dictionaryRepresentation
+        Alamofire.request(ServiceURLRequest.payment, method: .post, parameters: bodyParameters, encoding: JSONEncoding.default)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                guard let data = response.data else {
+                    completion(nil)
+                    return
+                }
+                do {
+                    let model = try newJSONDecoder().decode(PaymentModel.self, from: data)
+                    completion(model)
+                } catch {
+                    completion(nil)
+                }
         }
     }
 }

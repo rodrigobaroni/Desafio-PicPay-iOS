@@ -11,6 +11,7 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'IQKeyboardManagerSwift'
 pod 'Alamofire', '~> 4.8.0'
 pod 'SwiftKeychainWrapper', '~> 3.2'
+pod "CreditCardValidator"
 
   target 'Desafio PicPay iOSUITests' do
     inherit! :search_paths

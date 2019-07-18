@@ -13,12 +13,14 @@ struct CardModel {
     let cvv: Int?
     let cardName: String?
     let expiryDate: String?
+    let cardType: String?
     
-    init(cardNumber: String, cvv: Int, cardName: String, expiryDate: String) {
+    init(cardNumber: String, cvv: Int, cardName: String, expiryDate: String, cardType: String?) {
         self.cardNumber = cardNumber
         self.cvv = cvv
         self.cardName = cardName
         self.expiryDate = expiryDate
+        self.cardType = cardType
     }
     
 }

@@ -209,7 +209,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Vencimento"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -237,7 +237,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,14 +334,21 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="R$ 0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9N-gT-UrY">
-                                <rect key="frame" x="80" y="117" width="160" height="65"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9N-gT-UrY">
+                                <rect key="frame" x="16" y="117" width="288" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="nut-D8-W1c"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="54"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="R$ 0,00">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="54" name=".SFNSDisplay"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CH-ER-5pm" customClass="PicPayButton" customModule="Desafio_PicPay_iOS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="504" width="288" height="48"/>
@@ -352,6 +359,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Pagar"/>
+                                <connections>
+                                    <action selector="paymentAction:" destination="Jl3-lJ-lht" eventType="touchUpInside" id="5Nz-EK-hdi"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNC-P6-gCp">
                                 <rect key="frame" x="72" y="222" width="176" height="17"/>
@@ -367,6 +377,9 @@
                                         <state key="normal" title="EDITAR">
                                             <color key="titleColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="editCardAction:" destination="Jl3-lJ-lht" eventType="touchUpInside" id="J3x-oH-dSe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -388,12 +401,12 @@
                             <constraint firstItem="uHf-bj-6Ic" firstAttribute="bottom" secondItem="3CH-ER-5pm" secondAttribute="bottom" constant="16" id="Cj8-jh-kE3"/>
                             <constraint firstItem="WE7-QL-LsL" firstAttribute="top" secondItem="hcm-5q-fVv" secondAttribute="bottom" constant="8" id="LSo-qY-acF"/>
                             <constraint firstItem="WE7-QL-LsL" firstAttribute="leading" secondItem="uHf-bj-6Ic" secondAttribute="leading" constant="108" id="Pc3-WD-Cg3"/>
-                            <constraint firstItem="V9N-gT-UrY" firstAttribute="leading" secondItem="uHf-bj-6Ic" secondAttribute="leading" constant="80" id="df4-cx-OJR"/>
+                            <constraint firstItem="V9N-gT-UrY" firstAttribute="leading" secondItem="uHf-bj-6Ic" secondAttribute="leading" constant="16" id="df4-cx-OJR"/>
                             <constraint firstItem="3CH-ER-5pm" firstAttribute="leading" secondItem="uHf-bj-6Ic" secondAttribute="leading" constant="16" id="fxw-Zy-z43"/>
                             <constraint firstItem="qNC-P6-gCp" firstAttribute="top" secondItem="V9N-gT-UrY" secondAttribute="bottom" constant="40" id="got-Si-IjP"/>
                             <constraint firstItem="qNC-P6-gCp" firstAttribute="centerX" secondItem="wYA-hE-zAG" secondAttribute="centerX" id="l5E-FZ-Fc8"/>
                             <constraint firstItem="V9N-gT-UrY" firstAttribute="top" secondItem="WE7-QL-LsL" secondAttribute="bottom" constant="32" id="o6c-oV-xQj"/>
-                            <constraint firstItem="uHf-bj-6Ic" firstAttribute="trailing" secondItem="V9N-gT-UrY" secondAttribute="trailing" constant="80" id="tEM-I9-ZAi"/>
+                            <constraint firstItem="uHf-bj-6Ic" firstAttribute="trailing" secondItem="V9N-gT-UrY" secondAttribute="trailing" constant="16" id="tEM-I9-ZAi"/>
                             <constraint firstItem="uHf-bj-6Ic" firstAttribute="trailing" secondItem="qNC-P6-gCp" secondAttribute="trailing" constant="72" id="tLG-ca-qbz"/>
                             <constraint firstItem="uHf-bj-6Ic" firstAttribute="trailing" secondItem="3CH-ER-5pm" secondAttribute="trailing" constant="16" id="uiB-sw-2rK"/>
                             <constraint firstItem="uHf-bj-6Ic" firstAttribute="trailing" secondItem="WE7-QL-LsL" secondAttribute="trailing" constant="108" id="wxH-Nt-OJA"/>
@@ -490,12 +503,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWQ-SW-dQn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWQ-SW-dQn">
                                 <rect key="frame" x="20" y="308" width="181.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yNI-4X-ZmY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -544,6 +557,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rGD-ca-2xN"/>
                     </view>
+                    <connections>
+                        <outlet property="cardNameLabel" destination="69h-eZ-QbE" id="94c-7C-qkM"/>
+                        <outlet property="dateLabel" destination="L6s-X0-m5c" id="DNT-zI-GDn"/>
+                        <outlet property="nickNameLabel" destination="v7C-CJ-5pX" id="jRK-3L-jmn"/>
+                        <outlet property="totalTextLabel" destination="sWQ-SW-dQn" id="CHu-GK-LPS"/>
+                        <outlet property="totalValueLabel" destination="E1V-cg-aJQ" id="EvF-cw-qmg"/>
+                        <outlet property="transactionLabel" destination="ix3-ZL-eGn" id="Psv-W5-9pk"/>
+                        <outlet property="userImageView" destination="LaN-Eb-dZT" id="WHO-XT-QPz"/>
+                        <outlet property="valueLabel" destination="Rra-YW-ACC" id="8tk-YG-0K4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTE-6j-uPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

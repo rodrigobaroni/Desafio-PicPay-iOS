@@ -35,7 +35,7 @@ struct TransactionParameters: Codable {
         }
         
         return [
-            "card_number" : cardNumber,
+            "card_number" : cardNumber.returnOnlyNumbers(),
             "value" : value,
             "destination_user_id" : destination,
             "cvv" : cvv,
