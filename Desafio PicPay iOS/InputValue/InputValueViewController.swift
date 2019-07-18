@@ -107,12 +107,29 @@ class InputValueViewController: UIViewController, Storyboarded {
         
     }
     
+    private func callService() {
+        let parameters = createTransactionModel()
+        Service.payment(body: parameters) { [weak self] (paymentModel) in
+            if let payment = paymentModel {
+                self?.coordinator?.detailPayment(details: payment)
+            }
+            self?.showAlert()
+        }
+    }
     
     @IBAction func paymentAction(_ sender: Any) {
-        let parameters = createTransactionModel()
-        Service.payment(body: parameters) { (paymentModel) in
-            self.coordinator?.detailPayment(details: paymentModel)
+        self.callService()
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "PicPay", message: "Não foi possível pagar no momento", preferredStyle: .alert)
+        let tryAgain = UIAlertAction(title: "Tentar de novo", style: .default) { [weak self] action in
+            self?.callService()
         }
+        let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(tryAgain)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func editCardAction(_ sender: Any) {

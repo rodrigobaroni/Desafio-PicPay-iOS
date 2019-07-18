@@ -17,6 +17,5 @@ class CustomViewController: UIViewController {
     func setTitle(with name: String) {
         self.title = name
     }
-    
 
 }

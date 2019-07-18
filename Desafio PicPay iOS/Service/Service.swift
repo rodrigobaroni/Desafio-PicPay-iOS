@@ -16,13 +16,15 @@ private struct ServiceURLRequest {
 
 class Service {
     
-    static func users(completion: @escaping (_ response: User) -> Void) {
+    static func users(completion: @escaping (_ response: User?) -> Void) {
         Alamofire.request(ServiceURLRequest.users, method: .get)
             .validate(statusCode: 200..<300).responseUser(completionHandler: { (response) in
-            if let userModel = response.result.value {
-                completion(userModel)
-            }
-        })
+                if let userModel = response.result.value {
+                    completion(userModel)
+                }
+                completion(nil)
+            })
+        completion(nil)
     }
     
     static func payment(body: TransactionParameters?, completion: @escaping (_ response: PaymentModel?) -> Void) {

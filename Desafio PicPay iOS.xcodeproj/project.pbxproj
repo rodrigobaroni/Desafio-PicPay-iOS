@@ -20,7 +20,6 @@
 		1E03C10522D4FA5B00B61C00 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10422D4FA5B00B61C00 /* Storyboarded.swift */; };
 		1E03C10722D4FBAF00B61C00 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10622D4FBAF00B61C00 /* MainCoordinator.swift */; };
 		1E03C10922D50FA200B61C00 /* String+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03C10822D50FA200B61C00 /* String+Mask.swift */; };
-		1E34658D22DF9407000989EF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E34658C22DF9407000989EF /* Typealias.swift */; };
 		1E34658F22DFA224000989EF /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E34658E22DFA224000989EF /* UIFont+Extension.swift */; };
 		1E34659322DFEF5F000989EF /* ViewControllerPannable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E34659222DFEF5F000989EF /* ViewControllerPannable.swift */; };
 		1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3F62BC22CF82C40054307D /* CustomViewController.swift */; };
@@ -68,7 +67,6 @@
 		1E03C10422D4FA5B00B61C00 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		1E03C10622D4FBAF00B61C00 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		1E03C10822D50FA200B61C00 /* String+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Mask.swift"; sourceTree = "<group>"; };
-		1E34658C22DF9407000989EF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		1E34658E22DFA224000989EF /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		1E34659222DFEF5F000989EF /* ViewControllerPannable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPannable.swift; sourceTree = "<group>"; };
 		1E3F62BC22CF82C40054307D /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 				1E03C0F122D3C22700B61C00 /* JSONDecoder.swift */,
 				1E03C0F822D4A95200B61C00 /* CustomSearchBar.swift */,
 				1E03C0FD22D4EBB800B61C00 /* DataStorage.swift */,
-				1E34658C22DF9407000989EF /* Typealias.swift */,
 				1E34659222DFEF5F000989EF /* ViewControllerPannable.swift */,
 			);
 			path = Common;
@@ -451,7 +448,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3F62BD22CF82C40054307D /* CustomViewController.swift in Sources */,
-				1E34658D22DF9407000989EF /* Typealias.swift in Sources */,
 				1E03C10022D4ECE700B61C00 /* CardModel.swift in Sources */,
 				1E34659322DFEF5F000989EF /* ViewControllerPannable.swift in Sources */,
 				1E03C0F022D3C1D800B61C00 /* DataRequest+Extension.swift in Sources */,

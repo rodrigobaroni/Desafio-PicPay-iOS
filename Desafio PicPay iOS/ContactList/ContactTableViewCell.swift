@@ -33,7 +33,7 @@ class ContactTableViewCell: UITableViewCell {
             self.nickNameLabel?.text = nickName
             self.nameLabel?.text = name
             self.userImgView?.downloaded(from: image)
-            self.userImgView?.layer.cornerRadius = ((self.userImgView?.frame.size.width ?? sizeOfImageView) / 2)
+            self.userImgView?.setRounded()
             self.userImgView?.clipsToBounds = true
             self.setNeedsDisplay()
         }

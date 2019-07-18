@@ -36,10 +36,22 @@ class ContactListViewController: CustomViewController, Storyboarded {
     
     private func callService() {
         Service.users { [weak self] response in
-            self?.contacts = response
-            self?.currentSearchContact = response
+            if let users = response {
+                self?.contacts = users
+                self?.currentSearchContact = users
+            }
+            
             self?.tableView?.reloadData()
         }
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "PicPay", message: "A não, seus contatos não apareceram? tente novamente", preferredStyle: .alert)
+        let tryAgain = UIAlertAction(title: "tentar de novo", style: .default) { [weak self] action in
+            self?.callService()
+        }
+        alert.addAction(tryAgain)
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func setupSearchBar() {
