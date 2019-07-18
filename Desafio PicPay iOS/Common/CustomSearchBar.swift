@@ -17,7 +17,7 @@ class CustomSearchBar: UISearchBar {
             let searchField: UITextField = (subviews[0] ).subviews[index] as? UITextField ?? UITextField()
             
             searchField.frame = CGRect(x: 5.0, y: 5.0, width: frame.size.width - 10.0, height: frame.size.height - 10.0)
-            searchField.font = UIFont(name: "HelveticaNeue", size: CGFloat(15))
+            searchField.font = UIFont.picPayFont(with: 15)
             searchField.textColor = UIColor.picPayWhite
             
             searchField.backgroundColor = UIColor.picPayBlack

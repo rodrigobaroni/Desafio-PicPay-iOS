@@ -11,7 +11,15 @@ import SkyFloatingLabelTextField
 import CreditCardValidator
 
 class CardViewController: CustomViewController, Storyboarded {
-
+    
+    @IBOutlet private (set) weak var cardNumberTextField: SkyFloatingLabelTextField?
+    @IBOutlet private (set) weak var cardNameTextField: SkyFloatingLabelTextField?
+    @IBOutlet private (set) weak var cardExpiryDateTextField: SkyFloatingLabelTextField?
+    @IBOutlet private (set) weak var cardCVVTextField: SkyFloatingLabelTextField?
+    @IBOutlet private (set) weak var saveCardButton: PicPayButton?
+    @IBOutlet private (set) weak var saveButtonBottomConstraint: NSLayoutConstraint?
+    @IBOutlet private (set) weak var saveButtonUpConstraint: NSLayoutConstraint?
+    
     weak var coordinator: MainCoordinator?
     
     private var isKeyboardUp: Bool = false
@@ -26,14 +34,6 @@ class CardViewController: CustomViewController, Storyboarded {
             self.saveCardButton?.isHidden = !isSaveButtonEnable
         }
     }
-    
-    @IBOutlet private (set) weak var cardNumberTextField: SkyFloatingLabelTextField?
-    @IBOutlet private (set) weak var cardNameTextField: SkyFloatingLabelTextField?
-    @IBOutlet private (set) weak var cardExpiryDateTextField: SkyFloatingLabelTextField?
-    @IBOutlet private (set) weak var cardCVVTextField: SkyFloatingLabelTextField?
-    @IBOutlet private (set) weak var saveCardButton: PicPayButton?
-    @IBOutlet private (set) weak var saveButtonBottomConstraint: NSLayoutConstraint?
-    @IBOutlet private (set) weak var saveButtonUpConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
